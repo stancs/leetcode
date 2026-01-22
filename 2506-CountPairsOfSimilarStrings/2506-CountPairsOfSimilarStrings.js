@@ -1,4 +1,4 @@
-// Last updated: 1/21/2026, 8:16:12 PM
+// Last updated: 1/21/2026, 8:17:02 PM
 1/**
 2 * @param {string[]} words
 3 * @return {number}
