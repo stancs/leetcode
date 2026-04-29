@@ -1,0 +1,30 @@
+// Last updated: 4/29/2026, 10:34:52 AM
+/**
+ * Definition for a binary tree node.
+ * function TreeNode(val, left, right) {
+ *     this.val = (val===undefined ? 0 : val)
+ *     this.left = (left===undefined ? null : left)
+ *     this.right = (right===undefined ? null : right)
+ * }
+ */
+/**
+ * @param {TreeNode} root
+ * @return {number[]}
+ */
+var inorderTraversal = function(root) {
+    if(!root) {
+        return [];
+    }
+    const ans = [];
+    const dfs = (node, arr) => {
+        if(node.left) {
+            dfs(node.left, arr);
+        }
+        arr.push(node.val);
+        if(node.right) {
+            dfs(node.right, arr);
+        }
+    }
+    dfs(root, ans);
+    return ans;
+};
